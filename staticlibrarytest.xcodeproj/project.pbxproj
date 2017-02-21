@@ -14,6 +14,7 @@
 		4E1D67601E599EAC00C3B485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1D675E1E599EAC00C3B485 /* LaunchScreen.storyboard */; };
 		4E1D676B1E599EAD00C3B485 /* staticlibrarytestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D676A1E599EAD00C3B485 /* staticlibrarytestTests.swift */; };
 		4E1D67761E599EAD00C3B485 /* staticlibrarytestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D67751E599EAD00C3B485 /* staticlibrarytestUITests.swift */; };
+		4E8DA72D1E59FFB200D29846 /* libharbour.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E8DA72C1E59FFB200D29846 /* libharbour.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		4E1D67711E599EAD00C3B485 /* staticlibrarytestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = staticlibrarytestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E1D67751E599EAD00C3B485 /* staticlibrarytestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staticlibrarytestUITests.swift; sourceTree = "<group>"; };
 		4E1D67771E599EAD00C3B485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E1D67891E59A6D700C3B485 /* staticlibrarytest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "staticlibrarytest-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E8DA72C1E59FFB200D29846 /* libharbour.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libharbour.a; path = ../libs/lib/libharbour.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E8DA72D1E59FFB200D29846 /* libharbour.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +81,12 @@
 		4E1D67491E599EAB00C3B485 = {
 			isa = PBXGroup;
 			children = (
+				4E1D67891E59A6D700C3B485 /* staticlibrarytest-Bridging-Header.h */,
 				4E1D67541E599EAC00C3B485 /* staticlibrarytest */,
 				4E1D67691E599EAD00C3B485 /* staticlibrarytestTests */,
 				4E1D67741E599EAD00C3B485 /* staticlibrarytestUITests */,
 				4E1D67531E599EAC00C3B485 /* Products */,
+				4E1D67911E59D7AB00C3B485 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +129,14 @@
 				4E1D67771E599EAD00C3B485 /* Info.plist */,
 			);
 			path = staticlibrarytestUITests;
+			sourceTree = "<group>";
+		};
+		4E1D67911E59D7AB00C3B485 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E8DA72C1E59FFB200D29846 /* libharbour.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +207,7 @@
 				TargetAttributes = {
 					4E1D67511E599EAB00C3B485 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = R5ZGSD349Y;
 						ProvisioningStyle = Automatic;
 					};
 					4E1D67651E599EAD00C3B485 = {
@@ -412,11 +427,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R5ZGSD349Y;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = staticlibrarytest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					/Volumes/Developer/WorkBench/ios/libs/lib,
+					"$(PROJECT_DIR)/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = paysoft.staticlibrarytest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "staticlibrarytest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
 		};
@@ -424,11 +448,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R5ZGSD349Y;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = staticlibrarytest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					/Volumes/Developer/WorkBench/ios/libs/lib,
+					"$(PROJECT_DIR)/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = paysoft.staticlibrarytest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "staticlibrarytest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Release;
 		};
@@ -505,6 +538,7 @@
 				4E1D677C1E599EAD00C3B485 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E1D677D1E599EAD00C3B485 /* Build configuration list for PBXNativeTarget "staticlibrarytestTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +547,7 @@
 				4E1D677F1E599EAD00C3B485 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E1D67801E599EAD00C3B485 /* Build configuration list for PBXNativeTarget "staticlibrarytestUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +556,7 @@
 				4E1D67821E599EAD00C3B485 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
